@@ -61,7 +61,7 @@ let auto_benzina = []
 let auto_diesel = []
 let altre_auto = []
 
-automobili.forEach(element => {
+/* automobili.forEach(element => {
     if(element.alimentazione === 'benzina'){
         auto_benzina.push(element)
     } else if(element.alimentazione === 'diesel'){
@@ -71,6 +71,19 @@ automobili.forEach(element => {
     }
 });
 
+console.log(auto_benzina);
+console.log(auto_diesel);
+console.log(altre_auto); */
+
+auto_benzina = automobili.filter((element, automobili) => {
+    return element.alimentazione === 'benzina' 
+})
+auto_diesel = automobili.filter((element, automobili) => {
+    return element.alimentazione === 'diesel' 
+})
+altre_auto= automobili.filter((element, automobili) => {
+    return element.alimentazione === 'gpl' || element.alimentazione === 'metano' || element.alimentazione === 'elettrico' 
+})
 console.log(auto_benzina);
 console.log(auto_diesel);
 console.log(altre_auto);
