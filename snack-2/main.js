@@ -4,13 +4,16 @@
 const parole = ['ciao', 'Marco', 'CANE', 'Roberto', 'poliziotto', 'TORTA']
 
 // array parole formattate
-let parole_formattate = []
 let parole_capitalizate = []
 
-parole.forEach((word) =>{
-    parole_formattate.push(word.toLowerCase())
-})
-parole_formattate.forEach((word) => {
-    parole_capitalizate.push(word.charAt(0).toUpperCase() + word.substr(1))
-})
+// funzione per capitalizzare solo la prima lettera delle parole
+function capitalize_first_letter(array) {
+    let parole_formattate = []
+    array.forEach((word) =>{
+        parole_formattate.push(word.charAt(0).toUpperCase() + word.substr(1).toLowerCase())
+    })
+    return parole_formattate
+}
+
+parole_capitalizate = capitalize_first_letter(parole);
 console.log(parole_capitalizate);
