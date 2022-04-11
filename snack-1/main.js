@@ -62,9 +62,9 @@ let auto_diesel = []
 let altre_auto = []
 
 automobili.forEach(element => {
-    if(automobili.alimentazione == 'benzina'){
+    if(element.alimentazione === 'benzina'){
         auto_benzina.push(element)
-    } else if( automobili.alimentazione == 'diesel'){
+    } else if(element.alimentazione === 'diesel'){
         auto_diesel.push(element)
     } else {
         altre_auto.push(element)
