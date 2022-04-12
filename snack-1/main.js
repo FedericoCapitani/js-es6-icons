@@ -75,13 +75,13 @@ console.log(auto_benzina);
 console.log(auto_diesel);
 console.log(altre_auto); */
 
-auto_benzina = automobili.filter((element, automobili) => {
+auto_benzina = automobili.filter((element) => {
     return element.alimentazione === 'benzina' 
 })
-auto_diesel = automobili.filter((element, automobili) => {
+auto_diesel = automobili.filter((element) => {
     return element.alimentazione === 'diesel' 
 })
-altre_auto= automobili.filter((element, automobili) => {
+altre_auto= automobili.filter((element) => {
     return element.alimentazione === 'gpl' || element.alimentazione === 'metano' || element.alimentazione === 'elettrico' 
 })
 console.log(auto_benzina);
